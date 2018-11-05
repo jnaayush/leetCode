@@ -18,7 +18,6 @@ class Solution {
         if(l>r){
             return null;
         }
-        System.out.println("l:" + l + "r:" + r + "nums:" + nums[(l+r)/2]);
         TreeNode root = new TreeNode(nums[(l+r)/2]);
         root.left = addTree(l,(l+r)/2 - 1,nums);
         root.right = addTree((l+r)/2 + 1,r,nums);
